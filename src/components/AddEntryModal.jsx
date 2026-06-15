@@ -52,14 +52,14 @@ const AddEntryModal = ({ isOpen, onClose, onSave, entries }) => {
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
       <div className="bg-base-100 rounded-2xl shadow-2xl w-full max-w-lg">
-        <div className="flex items-center justify-between p-6 border-b border-(--border)">
+        <div className="flex items-center justify-between p-6 ">
           <h2 className="text-xl font-semibold text-(--text-h) m-0">New Entry</h2>
           <button className="btn btn-ghost btn-sm btn-circle" onClick={handleClose}>✕</button>
         </div>
 
         <form onSubmit={handleSubmit} className="p-6 flex flex-col gap-4">
           <div>
-            <label className="label text-sm font-medium text-(--text-h)">Title</label>
+            <label className="label block text-sm font-medium text-(--text-h) text-left">Title</label>
             <input
               type="text"
               name="title"
@@ -72,7 +72,7 @@ const AddEntryModal = ({ isOpen, onClose, onSave, entries }) => {
           </div>
 
           <div>
-            <label className="label text-sm font-medium text-(--text-h)">Date</label>
+            <label className="label block text-sm font-medium text-(--text-h) text-left">Date</label>
             <input
               type="date"
               name="date"
@@ -84,7 +84,7 @@ const AddEntryModal = ({ isOpen, onClose, onSave, entries }) => {
           </div>
 
           <div>
-            <label className="label text-sm font-medium text-(--text-h)">Image URL</label>
+            <label className="label block text-sm font-medium text-(--text-h) text-left">Image URL</label>
             <input
               type="url"
               name="image"
@@ -97,7 +97,7 @@ const AddEntryModal = ({ isOpen, onClose, onSave, entries }) => {
           </div>
 
           <div>
-            <label className="label text-sm font-medium text-(--text-h)">Content</label>
+            <label className="label block text-sm font-medium text-(--text-h) text-left">Content</label>
             <textarea
               name="content"
               value={form.content}
